@@ -1,5 +1,5 @@
 # Exercicios Python
- Aqui está alguns exercícios que irei resolver do 'Curso-em-video'
+ Aqui estarão os exercícios que  resolvi do 'Curso-em-video', do curso de python.
 
 
 1º Crie um programa que escreva 'Olá, Mundo' na tela.
