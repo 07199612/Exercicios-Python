@@ -247,7 +247,189 @@ random.shuffle(alunos)
 lista_embaralhada = random.sample(alunos, len(alunos))
 
 print(f'\nO aluno(a) escolhido(a) foi: {lista_embaralhada}')
+
+
+21º Faça um programa em Python que abra e reproduza o áudio de um arquivo MP3.
+
+import pygame
+pygame.init()
+pygame.mixer.music.load("TO VOANDO ALTO.mp3")
+pygame.mixer.music.play()
+pygame.event.wait()
     
+
+22º Crie um programa que leia o nome completo de uma pessoa e mostre:
+
+– O nome com todas as letras maiúsculas e minúsculas.
+
+– Quantas letras ao todo (sem considerar espaços).
+
+– Quantas letras tem o primeiro nome.
+
+resposta:
+
+n = str(input('Digite seu nome completo:')).strip()
+n_s_e = n.replace( ' ', '')
+c = len(n_s_e)
+p_n = n.split()[0]
+c_p_n = len(p_n)
+print(f' \n Nome com as letras em Maiúsculas -> {n.upper()}.')
+print('-'*65)
+print(f' Nome com as letras em Minúsculas -> {n.lower()}.')
+print('-'*65)
+print(f' A quantidade de letras SEM os espaços são de -> {c} números.')
+print('-'*65)
+print(f' A quantida de letras do 1º nome são de -> {c_p_n} números.')
+
+
+23º Faça um programa que leia um número de 0 a 9999 e mostre na tela cada um dos dígitos separados.
+
+resposta:
+
+num = input("Digite um número de \"0\" a \"9999\": ")
+
+digitos = [int(digito) for digito in str(num)]
+
+while len(digitos) < 4:
+    digitos.insert(0, 0)
+
+digito1 = digitos[0]
+digito2 = digitos[1]
+digito3 = digitos[2]
+digito4 = digitos[3]
+
+print(f"Milhar: {digito1}\nCentena: {digito2}\nDezena: {digito3}\nUnidade: {digito4}")
+
+
+24º Crie um programa que leia o nome de uma cidade diga se ela começa ou não com o nome “SANTO”.
+
+resposta:
+
+n = str(input('Digite o nome da cidade:')).strip().title()
+n_s_e = n.split()
+
+if n_s_e[0] == 'Santo':
+    print('O nome dessa cidade começa com SANTO')
+
+else:
+    print('O nome dessa cidade não começa com  SANTO')
+
+
+25º Crie um programa que leia o nome de uma pessoa e diga se ela tem “SILVA” no nome.
+
+resposta:
+
+n = str(input('Digite um nome \033[1;34mCOMPLETO\033[m: ')).strip().title().split()
+
+if 'Silva' in n:
+    print('Esse nome \033[1;32mtem SILVA\033[m')
+else:
+    print('Esse nome \033[1;31mnão\033[m tem \033[1;31mSILVA\033[')
+
+
+26º Faça um programa que leia uma frase pelo teclado
+ e mostre quantas vezes aparece a letra “A”, 
+ em que posição ela aparece a primeira vez
+ e em que posição ela aparece a última vez.
+
+resposta:
+
+n = str(input('Escreva uma frase:')).title().strip()
+
+c_n = n.replace(' ','') 
+c_a = n.count('A') + n.count('a')  # Contar ocorrências de 'a' e 'A' separadamente
+p_a = n.find('a') + 1  # Adicionar 1 para contar a partir da primeira posição corretamente
+u_a = c_n.rfind('a') + 1  # Adicionar 1 para contar a partir da última posição corretamente
+
+print(f'A letra \'A\' apareceu {c_a} vezes.')
+print(f'A letra \'A\' apareceu pela primeira vez na {p_a}º posição da frase.')
+print(f'A letra \'A\' apareceu pela última vez na {u_a}º posição da frase.')
+
+
+27º Faça um programa que leia o nome completo de uma pessoa, mostrando em seguida o primeiro e o último nome separadamente.
+
+resposta:
+
+n = str(input('Digite o nome:')).title().strip()
+
+n_b = n.split()
+
+print(n)
+print(f'O 1º nome é {n_b[0]} e o último nome é {n_b[-1]}.')
+
+
+28º Escreva um programa que faça o computador “pensar” em um número inteiro entre 0 e 5
+e peça para o usuário tentar descobrir qual foi o número escolhido pelo computador.
+O programa deverá escrever na tela se o usuário venceu ou perdeu.
+
+resposta:
+
+from random import choice
+from time import sleep
+
+lista = [0, 1, 2, 3, 4, 5]
+num_sorteado = choice(lista)
+
+print("-=-" * 20)
+print("Vou pensar em um número entre 0 e 5. Tente adivinhar...")
+print("-=-" * 20)
+
+while True:
+    jogador = int(input("Digite um número de 0 a 5: "))
+    print("PROCESSANDO...")
+    sleep(1)
+
+    if jogador == num_sorteado:
+        print("-=-" * 20)
+        print("Parabéns! Você conseguiu me vencer!")
+        print("-=-" * 20)
+        break
+    else:
+        print("-=-" * 20)
+        print("Você errou! O número sorteado foi: {}\nTente novamente.".format(num_sorteado))
+        print("-=-" * 20)
+        num_sorteado = choice(lista)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
