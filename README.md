@@ -602,6 +602,62 @@ else:
     print("\033[1;4;32mAprovado\033[m")
 
 
+41º A Confederação Nacional de Natação precisa de um programa que leia o ano de nascimento de um atleta e mostre sua categoria, de acordo com a idade:
+
+– Até 9 anos: MIRIM
+
+– Até 14 anos: INFANTIL
+
+– Até 19 anos: JÚNIOR
+
+– Até 25 anos: SÊNIOR
+
+– Acima de 25 anos: MASTER
+
+resposta:
+
+i = int(input('Digite a idade do Atleta:'))
+
+if i <= 9:
+    print('A categoria é MIRIM')
+elif i > 9 and i <= 14:
+    print('A categoria é INFANTIL')
+elif i > 14 and i <= 19:
+    print('A categoria  é JUNIOR')
+elif i > 19 and i <= 25:
+    print('A categoria  é SENIOR')
+else:
+    print('A categoria é MASTER')`
+
+
+42º Refaça o DESAFIO 35 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado:
+
+– EQUILÁTERO: todos os lados iguais
+
+– ISÓSCELES: dois lados iguais, um diferente
+
+– ESCALENO: todos os lados diferentes
+
+reposta:
+
+r1 = float(input("Digite o comprimento da 1º linha: "))
+r2 = float(input("Digite o comprimento da 2º linha: "))
+r3 = float(input("Digite o comprimento da 3º linha: "))
+
+if r1 + r2 > r3 and r1 + r3 > r2 and r2 + r3 > r1:
+    if r1 == r2 == r3:
+        print('Esse triângulo é um EQUILÁTERO')
+    elif r1 == r2 or r1 == r3 or r2 == r3:
+        print('Esse triângulo é um ISÓSCELES')
+    else:
+        print('Esse triângulo é um ESCALENO')
+else:
+    print('Infelizmente não formou um triângulo.')
+
+
+43º 
+
+
 
 
 
